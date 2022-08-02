@@ -27,6 +27,7 @@
     "express-validator": "^6.14.2",
     "http-errors": "^2.0.0",
     "mongoose": "^6.5.0",
+    "morgan": "^1.10.0",
     "query-to-mongo": "^0.10.2"
   },
   "devDependencies": {

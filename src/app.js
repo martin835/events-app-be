@@ -1,5 +1,6 @@
 import cors from "cors";
 import express from "express";
+import morgan from "morgan";
 import {
   badRequestHandler,
   forbiddenHandler,
@@ -7,6 +8,7 @@ import {
   notFoundHandler,
   unauthorizedHandler,
 } from "./errorHandlers.js";
+import eventsRouter from "./services/routers/events-router.js";
 
 const app = express();
 
@@ -39,8 +41,11 @@ app.use(
 
 app.use(express.json());
 //app.use(passport.initialize());
+app.use(morgan("combined"));
 
 //***********************************Endpoints*********************************************************/
+
+app.use("/events", eventsRouter);
 
 // For test purposes
 
