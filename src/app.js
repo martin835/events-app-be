@@ -9,6 +9,7 @@ import {
   unauthorizedHandler,
 } from "./errorHandlers.js";
 import eventsRouter from "./services/routers/events-router.js";
+import organizersRouter from "./services/routers/organizers-router.js";
 
 const app = express();
 
@@ -46,6 +47,7 @@ app.use(morgan("combined"));
 //***********************************Endpoints*********************************************************/
 
 app.use("/events", eventsRouter);
+app.use("/organizers", organizersRouter);
 
 // For test purposes
 

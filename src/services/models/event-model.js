@@ -15,7 +15,7 @@ const EventSchema = new Schema(
     //   city: { type: String, required: true },
     //   region: { type: String, required: true },
     // },
-    website: { type: String },
+    webpage: { type: String },
     price: { type: Number },
     familyFriendly: { type: Boolean },
     forKids: { type: Boolean },
