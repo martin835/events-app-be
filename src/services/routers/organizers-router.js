@@ -23,4 +23,18 @@ organizersRouter.post("/", async (req, res, next) => {
   }
 });
 
+organizersRouter.get("/:id", async (req, res, next) => {
+  try {
+    const organizer = await OrganizerModel.findById(req.params.id);
+
+    if (organizer) {
+      res.send(organizer);
+    } else {
+      next(createError(404, `Organizer with id ${req.params.id} not found!`));
+    }
+  } catch (error) {
+    next(error);
+  }
+});
+
 export default organizersRouter;
