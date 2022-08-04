@@ -13,7 +13,7 @@ const OrganizerSchema = new Schema(
     street: { type: String },
     streetNumber: { type: String },
     zip: { type: String },
-    top: { type: Boolean },
+    top: { type: String },
     remarks: { type: String },
     type: { type: String },
   },
