@@ -10,6 +10,7 @@ import {
 } from "./errorHandlers.js";
 import eventsRouter from "./services/routers/events-router.js";
 import organizersRouter from "./services/routers/organizers-router.js";
+import getShows from "./tools/eventScraper.js";
 
 const app = express();
 
