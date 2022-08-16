@@ -47,6 +47,6 @@ const scrapeShows = async () => {
   }
 };
 
-scrapeShows();
+//scrapeShows();
 
-export default scrapeShows;
+//export default scrapeShows;
