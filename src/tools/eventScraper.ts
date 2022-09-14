@@ -4,7 +4,7 @@ import OrganizerModel from "../services/models/organizer-model.js";
 import EventModel from "../services/models/event-model.js";
 
 const scrapeShows = async () => {
-  const shows = [];
+  const shows: { date: string; time: string; title: string }[] = [];
   try {
     let response = await axios("https://bdnr.sk/");
     const organizer = await OrganizerModel.findById("62ea65b94aa5b228b3b93d2c");

@@ -1,6 +1,10 @@
 import express from "express";
 import OrganizerModel from "../models/organizer-model.js";
 
+function createError(arg0: number, arg1: string): any {
+  throw new Error("Function not implemented.");
+}
+
 const organizersRouter = express.Router();
 
 organizersRouter.get("/", async (req, res, next) => {

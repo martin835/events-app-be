@@ -8,6 +8,7 @@ const mongoose_1 = __importDefault(require("mongoose"));
 const app_js_1 = __importDefault(require("./app.js"));
 // Server connection
 const port = process.env.PORT || 3001;
+//mongoose.connect(process.env.MONGO_CONNECTION as string);
 mongoose_1.default.connect(process.env.MONGO_CONNECTION);
 mongoose_1.default.connection.on("connected", () => {
     console.log("👌 Connected to Mongo!");
