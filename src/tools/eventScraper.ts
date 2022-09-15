@@ -1,7 +1,7 @@
 import axios from "axios";
 import * as cheerio from "cheerio";
-import OrganizerModel from "../services/models/organizer-model.js";
-import EventModel from "../services/models/event-model.js";
+import OrganizerModel from "../services/models/organizer-model";
+import EventModel from "../services/models/event-model";
 
 const scrapeShows = async () => {
   const shows: { date: string; time: string; title: string }[] = [];

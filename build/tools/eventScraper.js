@@ -37,12 +37,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const axios_1 = __importDefault(require("axios"));
 const cheerio = __importStar(require("cheerio"));
-const organizer_model_js_1 = __importDefault(require("../services/models/organizer-model.js"));
+const organizer_model_1 = __importDefault(require("../services/models/organizer-model"));
 const scrapeShows = () => __awaiter(void 0, void 0, void 0, function* () {
     const shows = [];
     try {
         let response = yield (0, axios_1.default)("https://bdnr.sk/");
-        const organizer = yield organizer_model_js_1.default.findById("62ea65b94aa5b228b3b93d2c");
+        const organizer = yield organizer_model_1.default.findById("62ea65b94aa5b228b3b93d2c");
         if (response.statusText === "OK") {
             let html = yield response.data;
             const $ = cheerio.load(html);

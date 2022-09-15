@@ -1,5 +1,5 @@
 import express from "express";
-import OrganizerModel from "../models/organizer-model.js";
+import OrganizerModel from "../models/organizer-model";
 
 function createError(arg0: number, arg1: string): any {
   throw new Error("Function not implemented.");

@@ -13,11 +13,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
-const event_model_js_1 = __importDefault(require("../models/event-model.js"));
+const event_model_1 = __importDefault(require("../models/event-model"));
 const eventsRouter = express_1.default.Router();
 eventsRouter.get("/", (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const events = yield event_model_js_1.default.find({});
+        const events = yield event_model_1.default.find({});
         res.send(events);
     }
     catch (error) {
@@ -26,7 +26,7 @@ eventsRouter.get("/", (req, res, next) => __awaiter(void 0, void 0, void 0, func
 }));
 eventsRouter.post("/", (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const newEvent = new event_model_js_1.default(req.body);
+        const newEvent = new event_model_1.default(req.body);
         const { _id } = yield newEvent.save();
         res.status(201).send({ _id });
     }
